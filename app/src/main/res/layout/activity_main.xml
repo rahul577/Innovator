@@ -11,24 +11,22 @@
 
     <ImageButton
         android:id="@+id/clickImage"
-        android:layout_width="367dp"
-        android:layout_height="246dp"
-        android:layout_marginLeft="8dp"
+        android:layout_width="3dp"
+        android:layout_height="2dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
         android:background="@color/pinki"
         android:onClick="clickImageClicked"
         android:scaleType="fitXY"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_weight="1"
-        android:layout_marginTop="27dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_margin="16dp"/>
+        app:layout_constraintVertical_weight="1" />
 
     <ImageButton
         android:id="@+id/AnalyseImage"
-        android:layout_width="367dp"
-        android:layout_height="242dp"
+        android:layout_width="30dp"
+        android:layout_height="20dp"
         android:layout_marginLeft="8dp"
         android:background="@color/white"
         android:onClick="AnalyseImageClicked"
@@ -69,4 +67,34 @@
         android:layout_alignTop="@+id/AnalyseImage"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="81dp" />
+
+
+    <android.support.design.widget.TextInputLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/user_input_container"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Message"
+            android:id="@+id/user_input"
+            android:imeOptions="actionDone"
+            android:inputType="textShortMessage"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/user_input_container">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/conversation"
+            android:textSize="16sp"
+            />
+    </ScrollView>
+
+
+
 </RelativeLayout>
