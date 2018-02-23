@@ -59,7 +59,6 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        AnalyseImage = (ImageView) findViewById(R.id.AnalyseImage);
         Sensey.getInstance().init(this);
 
 
@@ -164,7 +163,7 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
         Sensey.getInstance().startChopDetection(chopListener);
 
 
-        ClickImage = (ImageView) findViewById(R.id.clickImage);
+        
         t1 = new TextToSpeech(this, this);
 
     }
@@ -263,27 +262,6 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
         }
     }
 
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if ((keyCode == KeyEvent.KEYCODE_VOLUME_DOWN)){
-            //Do something
-            Intent z=new Intent(MainActivity.this,OcrCaptureActivity.class);
-            startActivity(z);
-        }
-        return true;
-    }
-
-    @Override
-    public boolean onKeyUp(int keyCode, KeyEvent event) {
-        if ((keyCode == KeyEvent.KEYCODE_VOLUME_UP)){
-            //Do something
-          Intent callIntent = new Intent(Intent.ACTION_CALL);
-           callIntent.setData(Uri.parse("tel:08039515396"));
-            startActivity(callIntent);
-
-        }
-        return true;
-    }
 
     @Override
     protected void onDestroy() {
@@ -292,4 +270,22 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
     }
 
 
+
+    public void Face_Recognition(View view) {
+        Intent z=new Intent(MainActivity.this,Emotions.class);
+        startActivity(z);
+    }
+
+    public void Teacher_Locator(View view) {
+    }
+
+    public void Barcode_Reader(View view) {
+        Intent n=new Intent(MainActivity.this,BarcodeDetectorActivity.class);
+        startActivity(n);
+    }
+
+    public void OCR(View view) {
+        Intent z=new Intent(MainActivity.this,OcrCaptureActivity.class);
+        startActivity(z);
+    }
 }
