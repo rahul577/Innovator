@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E1BEE7"
+    android:orientation="vertical"
+    tools:context="com.example.akshay.noblind.MainActivity">
+
+    <Button
+        android:id="@+id/face"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="36dp"
+        android:background="@mipmap/face"
+        android:onClick="Face_Recognition"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="100dp"
+        android:layout_alignRight="@+id/face"
+        android:layout_marginEnd="44dp"
+        android:layout_marginTop="36dp"
+        android:onClick="Teacher_Locator"
+        android:text="Teacher Locator"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="244dp"
+        android:layout_marginStart="32dp"
+        android:onClick="Barcode_Reader"
+        android:text="Barcode Reader"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="244dp"
+        android:layout_marginEnd="44dp"
+        android:onClick="OCR"
+        android:text="OCR"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+
+
+</android.support.constraint.ConstraintLayout>

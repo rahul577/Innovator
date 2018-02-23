@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    android:paddingBottom="16dp"
+    android:background="#E1BEE7"
+    tools:context="com.example.akshay.noblind.BarcodeDetectorActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/barcode_header"
+        android:id="@+id/status_message"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/barcode_value"
+        android:layout_below="@+id/status_message"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="110dp"
+        android:layout_alignRight="@+id/status_message"
+        android:layout_alignEnd="@+id/status_message" />
+
+    <Button
+        android:layout_width="180dp"
+        android:layout_height="220dp"
+        android:background="@mipmap/barcod"
+        android:elevation="16dp"
+        android:id="@+id/read_barcode"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true" />
+
+    <CheckBox
+        android:layout_width="5dp"
+        android:layout_height="5dp"
+        android:text="@string/auto_focus"
+        android:id="@+id/auto_focus"
+        android:checked="false"
+        android:layout_marginStart="17dp"
+        android:layout_below="@+id/barcode_value"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="19dp" />
+
+    <CheckBox
+        android:layout_width="5dp"
+        android:layout_height="5dp"
+        android:text="@string/use_flash"
+        android:id="@+id/use_flash"
+        android:layout_alignTop="@+id/auto_focus"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:checked="false" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="180dp"
+        android:layout_height="220dp"
+        android:background="@mipmap/searc"
+        android:elevation="16dp"
+        android:onClick="speak"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/read_barcode" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="READ BARCODE"
+        android:textColor="#000"
+        android:background="#FFF"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/read_barcode" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        android:background="#FFF"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignStart="@+id/button2" />
+
+
+</RelativeLayout>
